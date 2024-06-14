@@ -69,7 +69,7 @@ footer{
   padding: 5px;
 }
 
-nav a:hover {
+nav a:hover{
   color: var(--primary-color);
 }
 
