@@ -40,11 +40,9 @@ nav{
   color: var(--fourth-color);
 }
 
-nav li{
-  list-style-type: none;
-}
-
 a {
+  padding: 10px;
+  height: auto;
   color: var(--fourth-color);
   text-decoration: none;
 }
