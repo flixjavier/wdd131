@@ -1,0 +1,75 @@
+:root {
+  --primary-color:#333333;
+  --secondary-color: #000000;
+  --third-color:#CCCCCC; 
+  --fourth-color:#FFFFFF;
+  --font-family: "Lato"
+}
+
+body{
+  font-family: var(--font-family), sans-serif;
+  font-size: 2rem;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "header header header"
+    "main main aside"
+    "footer footer footer";
+  padding: 10px;
+}
+
+header{
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  grid-area: header;
+  padding: 5px;
+}
+header h1{
+  padding: 0.75rem;
+  font-weight: 700;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--secondary-color);
+  color: var(--fourth-color);
+}
+
+nav li{
+  list-style-type: none;
+}
+
+a {
+  color: var(--fourth-color);
+  text-decoration: none;
+}
+main{
+  background-color: var(--third-color);
+  color: var(--primary-color);
+  grid-area: main;
+  padding: 5px;
+}
+
+aside{
+  background-color: var(--fourth-color);
+  color: var(--primary-color);
+  grid-area: aside;
+  padding: 5px;
+}
+
+footer{
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  grid-area: footer;
+  padding: 5px;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
