@@ -23,6 +23,7 @@ body{
 }
 
 header{
+  display: grid;
   background-color: var(--primary-color);
   color: var(--third-color);
   grid-area: header;
@@ -36,6 +37,7 @@ header h1{
 nav{
   display: flex;
   justify-content: space-around;
+  align-self: end;
   background-color: var(--secondary-color);
   color: var(--fourth-color);
 }
