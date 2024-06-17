@@ -1,0 +1,141 @@
+:root {
+  --primary-color:#333333;
+  --secondary-color: #000000;
+  --third-color:#CCCCCC; 
+  --fourth-color:#FFFFFF;
+  --font-family: "Roboto";
+  --font-family2:"Lato";
+}
+  
+body{
+  font-family: var(--font-family), var(--font-family2);
+  font-size: 2rem;
+  margin: 10px;
+  text-align: center;
+}
+
+header{
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
+
+h1{
+  color: var(--fourth-color);
+  margin: 15px;
+}
+
+nav{
+  background-color: var(--secondary-color);
+}
+
+nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+nav a{
+  color:var(--fourth-color);
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a:hover{
+  color: var(--primary-color);
+}
+
+.card a:hover{
+  color: var(--fourth-color);
+}
+
+main{
+  background-color: var(--fourth-color);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "main-card main-card web-aside";
+  gap: 1vh;
+}
+
+.card{
+  border-radius: 10px;
+}
+
+.card h2{
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  color: var(--fourth-color);
+}
+
+#main-card{
+  background-color: var(--third-color);
+  grid-area: main-card;
+  padding: 1vh;
+}
+#main-card #family{
+  width: 50%;
+  height: auto; /* Maintain aspect ratio based on width */
+  aspect-ratio: 16 / 9; /* For a 16:9 aspect ratio */
+  object-fit: cover; /* or contain, depending on your needs */
+}
+
+#main-card #mexico-flag{
+  width: 25%;
+  height: auto; /* Maintain aspect ratio based on width */
+}
+
+#web-aside{
+  background-color: var(--third-color);
+  grid-area: web-aside;
+  padding: 1vh;
+}
+
+#web-aside ul{
+  text-align: end;
+}
+
+#web-aside li{
+  padding: 10px;
+}
+
+footer{
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  border-radius: 0 0 10px 10px;
+}
+
+/* larger Views */
+@media (min-width:640px) {
+  nav ul{
+    display: flex; 
+  }
+
+  nav ul li{
+    flex: 1 1 auto;
+  }
+}
+
+/* small views */
+
+@media (max-width:640px) {
+  main{
+    display: block;
+  }
+
+  .card{
+    margin: 10px;
+  }
+
+  #web-aside ul{
+    text-align: center;
+    padding: 0%;
+  }
+}

@@ -3,35 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="wdd131 | BYU idaho wdd131 JS course. WDD 131 - Dynamic Web Fundamentals. In this page you would find information about this course and the author: Felix Flores. Keyword: web fundamentals BYU IDAHO WDD 131">
   <meta name="author" content="Felix Flores">
-  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. In this page you would find information about this course and the author: Felix Flores. Keyword: web fundamentals BYU IDAHO WDD 131">
-  <link rel="stylesheet" type="text/css" href="styles/layout.css">
+  <link rel="stylesheet" type="text/css" href="styles/base.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <title>WDD 131 - Dynamic Web Fundamentals - Felix Flores</title>
 </head>
 <body>
-  <section class="container">
-    <header>
-      <h1>Header Content</h1>
-      <nav id="nav">
-          <a href="https://www.linkedin.com/in/felixjflores-zamarripa/details/experience/">Linked In</a>
-          <a href="https://byui.instructure.com/.">I - Learn</a>
-          <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng">Scripture</a>
-          <a href="">Contact Us</a>
-      </nav>
-    </header>
-    <main id="main">
-      <h2>Main Content</h2>
-      <img src="example.jpg" alt="Me: Felix Flores">
-      <p></p>
-      <p></p>
-    </main>
-    <aside id="aside">
-      <h2>Aside Content</h2>
-    </aside>
-    <footer>
-      <h3>Footer Content</h3>
-    </footer>
-  </section>
+  <header>
+    <h1>WDD 131 - Dynamic Web Fundamentals - <span>Félix Flores</span></h1>
+    <nav id="nav">
+      <ul>
+        <li><a href="https://www.linkedin.com/in/felixjflores-zamarripa/details/experience/">Linked In</a></li>
+        <li><a href="https://byui.instructure.com/.">I - Learn</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng">Scripture</a></li>
+        <li><a href="https://github.com/flixjavier/wdd131">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="card" id="main-card">
+      <h2>About Me</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore molestiae iusto vitae praesentium eius debitis totam, hic temporibus incidunt, reiciendis, facilis voluptas. Aut esse quis at officia exercitationem, sunt atque!</p>
+      <img id="family" src="images/family.png" alt="Felix Flores Family">
+      <figcaption>
+        <img id="mexico-flag" src="images/mexicoflag.png" alt="México Flag">
+        <figcaption>Chihuahua, México</figcaption>
+      </figcaption>
+    </section>
+    <section class="card" id="web-aside">
+      <h2>Web Dev Resources</h2>
+      <aside id="aside">
+        <ul>
+          <li><a href="https://cssgridgarden.com/">Grid Garden</a></li>
+          
+          <li><a href="https://flexboxfroggy.com/">flexboxfroggy</a></li>
+          
+          <li><a href="https://htmlcheatsheet.com/css/">CSS CheatSheet</a></li>
+          
+          <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flexbox-tricks">CSS Flexbox Guide</a></li>
+          
+          <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-properties">CSS Grid Guide</a></li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="currentyear"></span> 🌎 Felix Flores 🌏 🇲🇽 México</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>
