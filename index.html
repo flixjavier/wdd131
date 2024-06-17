@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <title>WDD 131 - Dynamic Web Fundamentals - Felix Flores</title>
+  <script src="scripts/getdates.js"></script>
 </head>
 <body>
   <header>
@@ -27,12 +28,16 @@
   <main class="main">
     <section class="card" id="main-card">
       <h2>About Me</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore molestiae iusto vitae praesentium eius debitis totam, hic temporibus incidunt, reiciendis, facilis voluptas. Aut esse quis at officia exercitationem, sunt atque!</p>
+      <p>My name is Félix and I live in the state of Chihuahua in Mexico. I am 37 years old and I am proud to have a wonderful family. My wife Lizly and my two daughters Emilia (7 years old) and Helena (4 years old). I am currently working in an agricultural laboratory as a microbiologist. However, I have a great passion for technology and programming.</p>
       <img id="family" src="images/family.png" alt="Felix Flores Family">
-      <figcaption>
-        <img id="mexico-flag" src="images/mexicoflag.png" alt="México Flag">
-        <figcaption>Chihuahua, México</figcaption>
-      </figcaption>
+      <hr class="styled-hr">
+      <div class="mexico-info">
+        <figure class="mexico">
+          <img id="mexico-flag" src="images/mexicoflag.png" alt="México Flag">
+          <figcaption>Chihuahua, México</figcaption>
+        </figure>
+        <p>Chihuahua, Mexico's largest state, boasts a rich history and diverse landscapes. Once a prosperous mining center, this northern state shares a border with the US and is known for its rugged mountains, vast Chihuahuan Desert, and the vibrant city of Chihuahua, the state capital.</p>
+      </div>
     </section>
     <section class="card" id="web-aside">
       <h2>Web Dev Resources</h2>
@@ -52,7 +57,7 @@
     </section>
   </main>
   <footer>
-    <p>&copy; <span id="currentyear"></span> 🌎 Felix Flores 🌏 🇲🇽 México</p>
+    <p>&copy; <span id="current-year"></span> 🌎 Felix Flores 🌏 🇲🇽 México</p>
     <p id="lastModified"></p>
   </footer>
 </body>

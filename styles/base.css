@@ -9,7 +9,7 @@
   
 body{
   font-family: var(--font-family), var(--font-family2);
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 10px;
   text-align: center;
 }
@@ -80,16 +80,53 @@ main{
   grid-area: main-card;
   padding: 1vh;
 }
+#main-card p{
+  text-align: justify;
+  padding: 30px;
+}
+
 #main-card #family{
   width: 50%;
   height: auto; /* Maintain aspect ratio based on width */
-  aspect-ratio: 16 / 9; /* For a 16:9 aspect ratio */
+  aspect-ratio: 16 / 9;  /* For a 16:9 aspect ratio */
   object-fit: cover; /* or contain, depending on your needs */
+  border-radius: 5px;
 }
 
 #main-card #mexico-flag{
-  width: 25%;
+  width: 100%;
   height: auto; /* Maintain aspect ratio based on width */
+}
+
+.styled-hr {
+  border: none;
+  height: 10px; 
+  background-color: var(--primary-color); 
+  margin: 20px 0; 
+  border-radius: 5px;
+}
+
+.mexico-info{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+}
+
+.mexico{
+  grid-column: 1 / 2;
+  justify-self: center;
+  align-self: center;
+}
+
+.mexico-info p {
+  grid-column: 2/3;
+}
+
+figcaption{
+  font-family: var(--font-family2);
+  font-style: italic;
+  font-size: 0.75rem;
 }
 
 #web-aside{
@@ -137,5 +174,8 @@ footer{
   #web-aside ul{
     text-align: center;
     padding: 0%;
+  }
+  .mexico-info{
+    display: block;
   }
 }
