@@ -20,12 +20,15 @@
     align-items: center;
   }
 
+  .navigation a{
+    display: block;
+  }
+
   #menu {
     display: none;
   }
 
 }
-
 
 /* Desktop display: 3 columns */
 @media (min-width: 901px) {
@@ -54,6 +57,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+  }
+
+  .navigation a{
+    display: block;
   }
 
   #menu {
