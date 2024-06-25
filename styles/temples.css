@@ -81,14 +81,13 @@ figcaption{
 
 img{
   max-width: 100%;
-  max-height: auto;
   border: 1.5px solid var(--primary-color);
   border-radius: 5px;
 }
 
 footer{
   background-color: var(--primary-color);
-  color: var(--third-color);
+  color: var(--fifth-color);
   border-radius: 0 0 10px 10px;
   padding: 10px;
 }
