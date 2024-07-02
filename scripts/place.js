@@ -1,6 +1,6 @@
 //Global Variables
-/* let TEMPERATURE = Math.random()*50; */
-let TEMPERATURE = 0;
+let TEMPERATURE = Math.random()*10;
+//let TEMPERATURE = 0;
 let WINDSPEED = Math.random()*70;
 let CONDITIONS = "Partialy Cloudy";
 let UBICATION = "Colonia Juarez"
