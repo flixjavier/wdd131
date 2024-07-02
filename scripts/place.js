@@ -59,7 +59,7 @@ windChillNumber.textContent = ` ${calculateWindChill(TEMPERATURE,WINDSPEED)}`
 
 const temperatureText = document.querySelector("#temperature");
 
-temperatureText.textContent = ` ${TEMPERATURE} °C`;
+temperatureText.textContent = ` ${TEMPERATURE.toFixed(2)} °C`;
 
 const conditionsText = document.querySelector("#conditions");
 

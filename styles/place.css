@@ -1,20 +1,21 @@
 :root{
-  --primary-color: #1A7833;
-  --secundary-color: #DA980C;
-  --tertiary-color: #A0AFA0;
-  --quaternary-color:  #00ADE6;
-  --font-color: #3D4A3D;
+  --primary-color:#333333;
+  --secondary-color: #000000;
+  --third-color:#CCCCCC; 
+  --main-bg-color: #ffffff;
+  --main-text-color: #000000;
   --font-family-heading:"Roboto";
   --font-family-text:"Lato";
 }
 
-*{
+body{
   font-family:var(--font-family-text), Arial, Helvetica, sans-serif;
-  color: var(--font-color);
+  color: var(--main-bg-color);
   font-size: 1.5rem;
 }
 
 p, strong, span {
+  font-family: "Lato", "Roboto", Arial, Helvetica, sans-serif;
   font-size: 1rem;
 }
 
@@ -28,7 +29,7 @@ h1{
   background-color: var(--primary-color);
   color: var(--secundary-color);
   padding: 20px;
-  border: 5px solid var(--secundary-color);
+  border: 5px solid var(--third-color);
   border-radius: 10px 10px 0 0;
 }
 
@@ -43,7 +44,7 @@ h1{
   width: 100%;
   height: auto; /* Ensures the image maintains its aspect ratio */
   border-radius: 5px;
-  border: 5px solid var(--secundary-color);
+  border: 5px solid var(--third-color);
 }
 
 source{
@@ -57,15 +58,18 @@ h2{
 }
 
 .data, .weather{
+  color: var(--main-text-color);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 #data-info, #weather-info{
-  background-color: var(--tertiary-color);
+  border: 2px solid var(--primary-color);
+  background-color: var(--third-color);
   border-radius: 10px;
   padding: 10px;
+  color: #000000;
 }
 
 .data p, .weather p{
@@ -77,7 +81,7 @@ footer{
   text-align: center;
   padding: 10px;
   margin: 10px 0;
-  border: 5px solid var(--secundary-color);
+  border: 5px solid var(--third-color);
   border-radius: 0 0 10px 10px;
-  background-color: #DA980C;
+  background-color: var(--primary-color);
 }

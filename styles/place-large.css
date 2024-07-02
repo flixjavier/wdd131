@@ -1,3 +1,12 @@
+:root{
+  --primary-color:#333333;
+  --secondary-color: #000000;
+  --third-color:#CCCCCC; 
+  --main-bg-color: #ffffff;
+  --main-text-color: #000000;
+  --font-family-heading:"Roboto";
+  --font-family-text:"Lato";
+}
 @media (min-width:800px) {
   *{
     font-size: 1.25rem;
@@ -28,7 +37,7 @@
 
   .data{
     opacity: 85%;
-    background-color: aliceblue;
+    background-color: var(--third-color);
     border-radius: 5px;
     justify-content: center;
     height: fit-content;
@@ -39,14 +48,14 @@
   }
 
   #data-info, #weather-info{
-    background-color: aliceblue;
+    background-color: var(--third-color);
     border-radius: 10px;
     padding: 10px;
   }
 
   .weather{
     opacity: 85%;
-    background-color: aliceblue;
+    background-color: var(--third-color);
     border-radius: 5px;
     justify-content: center;
     margin-bottom: 10px;
