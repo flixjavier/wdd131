@@ -68,7 +68,7 @@ body{
   justify-items: center;
 }
 
-.main figure{
+.main div{
   padding: 20px;
   text-align: center;
   font-size: 1rem;
@@ -86,7 +86,8 @@ span{
 }
 
 img{
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   border: 1.5px solid var(--primary-color);
   border-radius: 5px;
   box-shadow: -9px 3px 8px -8px rgba(0,0,0,0.75);
