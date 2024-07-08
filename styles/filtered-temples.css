@@ -1,0 +1,100 @@
+:root {
+  --primary-color:#333333;
+  --secondary-color: #000000;
+  --third-color:#CCCCCC; 
+  --fourth-color:#ffffff;
+  --fifth-color: #FFC75F;
+  --font-color: black;
+  --font-family: "Roboto";
+  --font-family2:"Lato";
+}
+
+body{
+  font-family: var(--font-family), var(--font-family2);
+  font-size: 1.5rem;
+  margin: 10px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #000;
+  position: fixed;
+	top: 10px;
+	right: 10px;
+}
+
+#menu::before {
+	content: "☰";
+  color: var(--secondary-color);
+}
+
+#menu.open::before {
+	content: "X";
+  color: var(--fourth-color);
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	background-color: var(--fifth-color);
+}
+
+.navigation a {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: var(--primary-color);
+}
+
+.navigation a:hover {
+	background-color: var(--fourth-color);
+	color: var(--fifth-color);
+	font-weight: 700;
+}
+
+.open a {
+	display: block;
+}
+
+.main{
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.main figure{
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.small-caps{
+  margin: 0;
+  font-variant: small-caps;
+}
+
+span{
+  font-family: var(--font-family2), Arial, Helvetica, sans-serif;
+  font-variant: normal;
+}
+
+img{
+  width: 100%;
+  border: 1.5px solid var(--primary-color);
+  border-radius: 5px;
+  box-shadow: -9px 3px 8px -8px rgba(0,0,0,0.75);
+}
+
+footer{
+  background-color: var(--primary-color);
+  color: var(--fifth-color);
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+}
