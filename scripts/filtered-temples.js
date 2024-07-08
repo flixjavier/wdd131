@@ -94,12 +94,39 @@ const home = document.querySelector(".home");
 home.addEventListener("click", () => {cardsTemplate(temples)});
 
 //filtered array 
-const nonUtahLink = document.querySelector(".nonutah");
+const oldLink = document.querySelector(".old");
 
-nonUtahLink.addEventListener("click", () =>{
-  let nonutah = temples.filter(temple => !temple.location.includes("Utah"));
-  console.log(nonutah);
-  cardsTemplate(nonutah);
+oldLink.addEventListener("click", () =>{
+  let yearTemple = temples.filter(temple => {
+    const year = parseInt(temple.dedicated.split(', ')[0]);
+    return year < 1900;
+  });
+  cardsTemplate(yearTemple);
+});
+
+const newLink = document.querySelector(".new");
+
+newLink.addEventListener("click", () => {
+  const yearTemple = temples.filter(temple => {
+    const year = parseInt(temple.dedicated.split(', ')[0]); // Extract and parse the year
+    return year > 2000; // Return true for temples dedicated after 2000
+  });
+
+  cardsTemplate(yearTemple);
+});
+
+const largeLink = document.querySelector(".large");
+
+largeLink.addEventListener("click", () =>{
+  const largeTemple = temples.filter(temple => temple.area > 90000);
+  cardsTemplate(largeTemple);
+});
+
+const smallLink = document.querySelector(".small");
+
+smallLink.addEventListener("click", () => {
+  const smallTemples = temples.filter(temple => temple.area < 10000);
+  cardsTemplate(smallTemples);
 });
 
 //create Card
