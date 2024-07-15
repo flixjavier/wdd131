@@ -1,0 +1,76 @@
+:root {
+  --primary-color:#333333;
+  --secondary-color: #000000;
+  --third-color:#CCCCCC; 
+  --fourth-color:#FFFFFF;
+  --font-family: "Roboto";
+  --font-family2:"Lato";
+}
+
+:root {
+  --main-bg-color: #ffffff;
+  --main-text-color: #000000;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+  
+body{
+  font-family: var(--font-family), var(--font-family2);
+  font-size: 1.5rem;
+  margin: 10px;
+  text-align: center;
+  background-color: var(--third-color);
+}
+
+header{
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  color: var(--fourth-color);
+}
+
+main{
+  background-color: var(--fourth-color);
+  padding: 20px;
+}
+
+.label{
+  font-family: var(--font-family2);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.counter{
+  font-family: var(--font-family2);
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+footer{
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  border-radius: 0 0 10px 10px;
+}
+
+/* larger Views */
+@media (min-width:640px) {
+
+}
+
+/* small views */
+
+@media (max-width:640px) {
+  
+  /* Dark Theme */
+  .dark-theme {
+  --main-bg-color: #000000;
+  --main-text-color: #ffffff;
+  }
+  
+  main{
+    display: block;
+  }
+
+}
