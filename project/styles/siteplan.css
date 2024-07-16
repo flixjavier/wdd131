@@ -35,9 +35,7 @@ img {
   margin: 0 auto;
   max-width: 300px;
 }
-a{
-  font-family: var(--paragraph-font);
-}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
   color: var(--headline-color-on-white);
@@ -102,23 +100,23 @@ p.colored {
   color: var(--paragraph-color-on-color);
 }
 nav {
+  list-style-type: none;
+  display: flex;
   background-color: var(--nav-background-color);
   line-height: 3em;
   text-align: center;
   font-size: 1.2em;
 }
-nav  {
-  list-style-type: none;
-  display: flex;
-}
+
 nav a {
+  font-family: var(--paragraph-font);
   padding:1em;
   min-width: 120px;
   text-decoration: none;
   padding: 10px;
 }
 nav a:link, nav a:visited {
-  color: var(--nav-link-color);
+  color: var(--primary-color);
 }
 nav a:hover {
   color: var(--nav-hover-link-color);
