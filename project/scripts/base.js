@@ -158,6 +158,6 @@ function onionsCardsTemplate(array) {
       </div>`;
     cardsTemplate.appendChild(cardTemplate);
   });
-}
+};
 
 homeTemplate();

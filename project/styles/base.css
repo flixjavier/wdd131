@@ -87,6 +87,7 @@ body{
   text-align: center;
   font-size: 1rem;
   margin: 0;
+  grid-column: 1/4;
 }
 
 .hero-container {
@@ -204,15 +205,22 @@ img{
   height: auto;
   border: 1.5px solid var(--primary-color);
   border-radius: 5px;
-  box-shadow: -9px 3px 8px -8px rgba(0,0,0,0.75);
+}
+
+.social img{
+  width: 30px;
+  height: auto;
 }
 
 footer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background-color: var(--primary-color);
   color: var(--secondary-color);
   padding: 10px;
 }
-
 
 @media (max-width: 600px) {
   .info-container figure{
