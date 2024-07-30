@@ -118,22 +118,44 @@ function contactUsTemplate() {
 	contactTemplate.className = "template";
 		
   contactTemplate.innerHTML = `
-  <form action="thanks.html" method="get" class="form">
-    <label for="fname">First Name:</label>
-    <input id="fname" type="text" name="firstname" placeholder="First Name" required>
-    <label for="lname">Last Name:</label>
-    <input id="lname" type="text" name="lastname" placeholder="Last Name" required>
+  <form onsubmit="submitForm(event)" method="get" class="form">
+    <label for="fname">Nombre:</label>
+    <input id="fname" type="text" name="firstname" placeholder="Nombre" required>
+    <label for="lname">Apellidos:</label>
+    <input id="lname" type="text" name="lastname" placeholder="Apellidos" required>
     <label for="email">Email:</label>
     <input id="email" type="email" name="email" placeholder="someone@gmail.com" required>
-    <label for="phone">Phone number:</label>
+    <label for="phone">Número Teléfono:</label>
     <input id="phone" type="tel" name="phone" placeholder="6141755234" required>
-    <label for="textarea">Reason for contact:</label>
-    <textarea id="textarea" name="contact" placeholder="Write your text here.." required></textarea>
-    <input type="submit" value="Send Message">
+    <label for="textarea">Mensaje:</label>
+    <textarea id="textarea" name="contact" placeholder="Escribe to mensaje aqui..." required></textarea>
+    <input type="submit" value="Enviar Mensaje">
   </form>
   `;
 
   template.appendChild(contactTemplate);
+}
+
+function submitForm(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get form data
+  const fname = document.getElementById('fname').value;
+  const lname = document.getElementById('lname').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const message = document.getElementById('textarea').value;
+
+  // Construct the mailto URL
+  const mailtoUrl = `mailto:aveproducto77@hotmail.com?subject=Mensaje Enviado&body=Nombre: ${encodeURIComponent(fname)} ${encodeURIComponent(lname)}%0ATeléfono: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email)}%0AMensaje: ${encodeURIComponent(message)}`;
+
+  // Open the mailto URL
+  window.location.href = mailtoUrl;
+
+  // Redirect to thank you page after a delay
+  setTimeout(() => {
+      window.location.href = 'thanks.html';
+  }, 1000); // Adjust the delay as needed
 }
 
 function onionsCardsTemplate(array) {
@@ -150,7 +172,7 @@ function onionsCardsTemplate(array) {
         <figure><img src="${onion.imageSCR}" alt="${onion.onionName}"  loading="lazy" width="300" height="auto"><figure>
         <h1>${onion.onionName}</h1>
         <p>Corte: ${onion.corte}<br/>
-           Siembra: ${onion.siembra}</p>
+          Siembra: ${onion.siembra}</p>
       </div>
       <div class="button-wrapper"> 
         <button class="btn outline">DETAILS</button>
